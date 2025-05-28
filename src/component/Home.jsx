@@ -21,14 +21,17 @@ useEffect(() => {
     //  هنا تنعرض الصور اللي اضقتها  
 
     <div className=" bg-gray-200 p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] mx-auto gap-5 items-center justify-center">
       {name.map((character) => (
         <div key={character.id} className="flex flex-col bg-white p-4 mb-4 rounded shadow text-center w-[80%] mx-auto">
             <img src={character.image} alt="image" />
               <h2 className="text-lg text-black font-bold">{character.name}</h2>
             <p className="text-black">{character.gender}</p>
+          
         </div>
         
       ))}
+        </div>
 
 
 
